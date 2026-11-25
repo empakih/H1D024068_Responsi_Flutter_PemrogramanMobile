@@ -63,7 +63,9 @@ Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 
 ## Video
 - **Video Penjelasan Kode**: https://youtu.be/tYhkij4xAx0
-- **Video Demo**: https://github.com/user-attachments/assets/38eccdae-0646-4f45-b516-a7686f67b09c
+- **Video Demo**:
+
+https://github.com/user-attachments/assets/38eccdae-0646-4f45-b516-a7686f67b09c
 
 ## Screenshot Aplikasi
 
