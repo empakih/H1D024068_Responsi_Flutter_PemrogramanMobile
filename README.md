@@ -1,9 +1,12 @@
 # Weather App - Responsi Flutter Pemrograman Mobile
 
 ## Identitas
-- Nama: Muhammad Faqih Muhyiddin
-- NIM: H1D024068
-- Tugas: Responsi Flutter - Pemrograman Mobile
+| Field | Detail |
+| --- | --- |
+| **Nama** | Muhammad Faqih Muhyiddin |
+| **NIM** | H1D024068 |
+| **Shift Awal** | E |
+| **Shift Baru** | D |
 
 ## Deskripsi
 Aplikasi prakiraan cuaca berbasis Flutter menggunakan Open-Meteo API sebagai sumber data cuaca, Provider untuk state management, SharedPreferences untuk penyimpanan lokal, serta arsitektur MVVM.
@@ -58,8 +61,11 @@ lib/
 ## Repository
 Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 
-## Video Demo
-*(tambahkan link video di sini)*
+## Video
+- **Video Penjelasan Kode**: https://youtu.be/tYhkij4xAx0
+- **Video Demo**:
+
+<video src="screenshots/weatherappdemocompress.mp4" controls width="260"></video>
 
 ## Screenshot Aplikasi
 
@@ -85,4 +91,4 @@ Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 - [x] `flutter analyze` tanpa issue.
 - [x] `flutter test` lulus.
 - [x] Screenshot aplikasi setelah pengujian manual.
-- [ ] Link video penjelasan kode.
+- [x] Link video penjelasan kode.
