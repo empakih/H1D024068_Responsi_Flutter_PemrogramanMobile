@@ -14,7 +14,7 @@ Aplikasi prakiraan cuaca berbasis Flutter menggunakan Open-Meteo API sebagai sum
 - Pencarian kota via Open-Meteo Geocoding API.
 - Lokasi favorit tersimpan di SharedPreferences.
 - Tema gelap dan terang dengan tombol switch.
-- UI Liquid Glass dengan efek blur, gradasi iridescent, dan edge-to-edge layout.
+- Desain modern dengan efek blur dan edge-to-edge layout.
 
 ## Teknologi
 Flutter, Dart, HTTP, Provider, SharedPreferences, Open-Meteo API, dan Material 3.
