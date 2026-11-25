@@ -1,47 +1,88 @@
-# Weather App (Responsi Flutter)
+# Weather App - Responsi Flutter Pemrograman Mobile
 
-Aplikasi prakiraan cuaca berbasis Flutter menggunakan **Open-Meteo API** dengan pola arsitektur **MVVM (Model-View-ViewModel)**, state management **Provider**, dan penyimpanan lokal **SharedPreferences**.
+## Identitas
+- Nama: Muhammad Faqih Muhyiddin
+- NIM: H1D024068
+- Tugas: Responsi Flutter - Pemrograman Mobile
 
-## Struktur Aplikasi
+## Deskripsi
+Aplikasi prakiraan cuaca berbasis Flutter menggunakan Open-Meteo API sebagai sumber data cuaca, Provider untuk state management, SharedPreferences untuk penyimpanan lokal, serta arsitektur MVVM.
+
+## Fitur
+- Cuaca terkini: suhu, kelembapan, kecepatan angin, curah hujan, dan kondisi cuaca.
+- Prakiraan harian hingga 5 hari ke depan dengan suhu max/min dan peluang hujan.
+- Pencarian kota via Open-Meteo Geocoding API.
+- Lokasi favorit tersimpan di SharedPreferences.
+- Tema gelap dan terang dengan tombol switch.
+- UI Liquid Glass dengan efek blur, gradasi iridescent, dan edge-to-edge layout.
+
+## Teknologi
+Flutter, Dart, HTTP, Provider, SharedPreferences, Open-Meteo API, dan Material 3.
+
+## Menjalankan Project
+```bash
+flutter pub get
+flutter analyze
+flutter test
+flutter run
+```
+
+## Struktur MVVM
+Model data cuaca dan lokasi berada di `lib/models`, akses API dan penyimpanan lokal di `lib/services`, logika state di `lib/viewmodels`, UI di `lib/views`, tema di `lib/theme`, serta widget reusable di `lib/widgets`.
 
 ```text
 lib/
-├── main.dart                     # Entry point & konfigurasi MultiProvider
+├── main.dart
 ├── models/
-│   ├── location_model.dart       # Model data lokasi (Geocoding & Local Storage)
-│   └── weather_model.dart        # Model data cuaca terkini & prakiraan harian
+│   ├── location_model.dart
+│   └── weather_model.dart
 ├── services/
-│   ├── geocoding_service.dart    # HTTP GET ke Open-Meteo Geocoding API
-│   ├── storage_service.dart      # Local Storage (SharedPreferences) untuk favorit
-│   └── weather_service.dart      # HTTP GET ke Open-Meteo Forecast API
+│   ├── geocoding_service.dart
+│   ├── storage_service.dart
+│   └── weather_service.dart
 ├── theme/
-│   └── app_theme.dart            # Material Design 3 Theme & Typography
+│   └── app_theme.dart
 ├── viewmodels/
-│   ├── location_viewmodel.dart   # State pencarian kota & daftar lokasi favorit
-│   └── weather_viewmodel.dart    # State cuaca aktif (loading, data, error)
-└── views/
-    ├── home_screen.dart          # Home / Weather Screen
-    └── search_screen.dart        # Search / Location Screen
+│   ├── location_viewmodel.dart
+│   ├── theme_viewmodel.dart
+│   └── weather_viewmodel.dart
+├── views/
+│   ├── favorites_screen.dart
+│   ├── home_screen.dart
+│   ├── main_shell.dart
+│   └── search_screen.dart
+└── widgets/
+    └── liquid_glass_card.dart
 ```
 
-## Implementasi API
+## Repository
+Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 
-1. **Open-Meteo Weather Forecast API** (`https://api.open-meteo.com/v1/forecast`)
-   - Parameter: `latitude`, `longitude`, `timezone=auto`, `current`, dan `daily`.
-   - Data `current`: `temperature_2m`, `relative_humidity_2m`, `apparent_temperature`, `precipitation`, `weather_code`, `wind_speed_10m`.
-   - Data `daily`: `weather_code`, `temperature_2m_max`, `temperature_2m_min`, `precipitation_probability_max`.
-2. **Open-Meteo Geocoding API** (`https://geocoding-api.open-meteo.com/v1/search`)
-   - Digunakan pada fitur pencarian kota berdasarkan nama (`name`, `count=10`, `language=id`).
-
-## Penerapan MVVM
-
-- **Model**: `WeatherModel`, `CurrentWeather`, `DailyForecast`, dan `LocationModel` merepresentasikan struktur data dari JSON API dan penyimpanan lokal.
-- **View**: `HomeScreen` dan `SearchScreen` hanya bertugas menampilkan UI dan meneruskan aksi pengguna ke ViewModel.
-- **ViewModel**: `WeatherViewModel` dan `LocationViewModel` (turunan `ChangeNotifier`) memanggil `Service`, mengelola state (`isLoading`, `errorMessage`, data), dan memanggil `notifyListeners()` agar UI otomatis ter-update.
+## Video Demo
+*(tambahkan link video di sini)*
 
 ## Screenshot Aplikasi
 
-> Letakkan screenshot setiap screen aplikasi di bagian ini setelah menjalankan aplikasi pada emulator/perangkat.
+<table>
+  <tr>
+    <td align="center"><strong>Beranda (Terang)</strong><br><img src="screenshots/beranda_terang.jpg" width="220"></td>
+    <td align="center"><strong>Beranda (Gelap)</strong><br><img src="screenshots/beranda_gelap.jpg" width="220"></td>
+    <td align="center"><strong>Cari Lokasi</strong><br><img src="screenshots/cari_lokasi.jpg" width="220"></td>
+  </tr>
+  <tr>
+    <td align="center"><strong>Hasil Pencarian</strong><br><img src="screenshots/hasil_pencarian.jpg" width="220"></td>
+    <td align="center"><strong>Lokasi Favorit</strong><br><img src="screenshots/favorit.jpg" width="220"></td>
+    <td align="center"><strong>Detail Cuaca</strong><br><img src="screenshots/detail_cuaca.jpg" width="220"></td>
+  </tr>
+</table>
 
-- **Home / Weather Screen**: *(tambahkan screenshot di sini)*
-- **Search / Location Screen**: *(tambahkan screenshot di sini)*
+## Checklist Pengujian
+- [x] Data cuaca terkini dari Open-Meteo API.
+- [x] Prakiraan harian hingga 5 hari.
+- [x] Pencarian kota via Geocoding API.
+- [x] Simpan dan muat lokasi favorit dari SharedPreferences.
+- [x] Switch tema gelap dan terang.
+- [x] `flutter analyze` tanpa issue.
+- [x] `flutter test` lulus.
+- [ ] Screenshot aplikasi setelah pengujian manual.
+- [ ] Link video penjelasan kode.
