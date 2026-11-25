@@ -3,11 +3,14 @@ import 'package:provider/provider.dart';
 import '../models/location_model.dart';
 import '../viewmodels/location_viewmodel.dart';
 import '../viewmodels/weather_viewmodel.dart';
+import '../widgets/liquid_glass_card.dart';
 
 /// Screen for searching cities via Open-Meteo Geocoding API and managing
 /// persisted favorite locations.
 class SearchScreen extends StatefulWidget {
-  const SearchScreen({super.key});
+  final VoidCallback? onLocationSelected;
+
+  const SearchScreen({super.key, this.onLocationSelected});
 
   @override
   State<SearchScreen> createState() => _SearchScreenState();
@@ -28,7 +31,11 @@ class _SearchScreenState extends State<SearchScreen> {
 
   Future<void> _selectLocation(LocationModel location) async {
     final weatherVm = context.read<WeatherViewModel>();
-    Navigator.pop(context);
+    if (widget.onLocationSelected != null) {
+      widget.onLocationSelected!();
+    } else if (Navigator.canPop(context)) {
+      Navigator.pop(context);
+    }
     await weatherVm.selectLocation(location);
   }
 
@@ -181,8 +188,9 @@ class _LocationTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      margin: const EdgeInsets.only(bottom: 8),
+    return LiquidGlassCard(
+      margin: const EdgeInsets.only(bottom: 10),
+      borderRadius: 16,
       child: ListTile(
         leading: const Icon(Icons.location_on_outlined),
         title: Text(location.name),
