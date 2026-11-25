@@ -65,7 +65,7 @@ Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 - **Video Penjelasan Kode**: https://youtu.be/tYhkij4xAx0
 - **Video Demo**:
 
-<video src="screenshots/weatherappdemocompress.mp4" controls width="260"></video>
+https://github.com/empakih/H1D024068_Responsi_Flutter_PemrogramanMobile/raw/master/screenshots/weatherappdemocompress.mp4
 
 ## Screenshot Aplikasi
 
