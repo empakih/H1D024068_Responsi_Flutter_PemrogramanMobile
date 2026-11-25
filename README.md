@@ -65,14 +65,14 @@ Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 
 <table>
   <tr>
-    <td align="center"><strong>Beranda (Terang)</strong><br><img src="screenshots/beranda_terang.jpg" width="220"></td>
-    <td align="center"><strong>Beranda (Gelap)</strong><br><img src="screenshots/beranda_gelap.jpg" width="220"></td>
-    <td align="center"><strong>Cari Lokasi</strong><br><img src="screenshots/cari_lokasi.jpg" width="220"></td>
+    <td align="center"><strong>Beranda (Terang)</strong><br><img src="screenshots/berandaterang.jpg" width="220"></td>
+    <td align="center"><strong>Beranda (Gelap)</strong><br><img src="screenshots/berandagelap.jpg" width="220"></td>
+    <td align="center"><strong>Cari Lokasi</strong><br><img src="screenshots/carilokasi.jpg" width="220"></td>
   </tr>
   <tr>
-    <td align="center"><strong>Hasil Pencarian</strong><br><img src="screenshots/hasil_pencarian.jpg" width="220"></td>
+    <td align="center"><strong>Hasil Pencarian</strong><br><img src="screenshots/hasilpencarian.jpg" width="220"></td>
     <td align="center"><strong>Lokasi Favorit</strong><br><img src="screenshots/favorit.jpg" width="220"></td>
-    <td align="center"><strong>Detail Cuaca</strong><br><img src="screenshots/detail_cuaca.jpg" width="220"></td>
+    <td align="center"><strong>Detail Cuaca</strong><br><img src="screenshots/detail%20cuaca.jpg" width="220"></td>
   </tr>
 </table>
 
@@ -84,5 +84,5 @@ Repository ini dibuat untuk pengumpulan Responsi Flutter Pemrograman Mobile.
 - [x] Switch tema gelap dan terang.
 - [x] `flutter analyze` tanpa issue.
 - [x] `flutter test` lulus.
-- [ ] Screenshot aplikasi setelah pengujian manual.
+- [x] Screenshot aplikasi setelah pengujian manual.
 - [ ] Link video penjelasan kode.
