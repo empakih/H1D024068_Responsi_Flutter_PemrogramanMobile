@@ -5,8 +5,8 @@
 | --- | --- |
 | **Nama** | Muhammad Faqih Muhyiddin |
 | **NIM** | H1D024068 |
-| **Shift Awal** | E |
-| **Shift Baru** | D |
+| **Shift KRS** | E |
+| **Shift Praktikum** | D |
 
 ## Deskripsi
 Aplikasi prakiraan cuaca berbasis Flutter menggunakan Open-Meteo API sebagai sumber data cuaca, Provider untuk state management, SharedPreferences untuk penyimpanan lokal, serta arsitektur MVVM.
